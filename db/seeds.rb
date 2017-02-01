@@ -8,7 +8,13 @@
 
 Product.delete_all
 Product.create! id: 1, name: "Brigadeiro", price: 1.05, category: "tradicionaisI", active: true
-Product.create! id: 2, name: "Churros", price: 2.50, category: "gourmets", active: true,
-Product.create! id: 3, name: "Morango", price: 1.80, category:"bombons", active: true,
-Product.create! id: 4, name: "Sucrilhos", price: 1.90, category:"caramelados", active: true,
-Product.create! id: 5, name: "Uva", price: 1.80, category:"bombons", active: true,
+Product.create! id: 2, name: "Churros", price: 2.50, category: "gourmets", active: true
+Product.create! id: 3, name: "Morango", price: 1.80, category: "bombons", active: true
+Product.create! id: 4, name: "Sucrilhos", price: 2.00, category: "caramelados", active: true
+Product.create! id: 5, name: "Uva", price: 1.80, category: "bombons", active: true
+
+OrderStatus.delete_all
+OrderStatus.create! id: 1, name: "In Progress"
+OrderStatus.create! id: 2, name: "Placed"
+OrderStatus.create! id: 3, name: "Shipped"
+OrderStatus.create! id: 4, name: "Cancelled"
