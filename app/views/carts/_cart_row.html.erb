@@ -5,7 +5,7 @@
       <h10><%= product.name %></h10>
     </div>
     <div class="col-xs-4">
-      
+
       <%= form_for order_item, remote: true do |f| %>
         <h10 class="text-right">Unit Price: <span style="color: green"><%= number_to_currency order_item.unit_price %></span></h10>
         <div class="row">
@@ -23,6 +23,6 @@
         <h10 class="text-right">Total Price: <span style="color: green"><%= number_to_currency order_item.total_price %></span></h10>
       <% end %>
     </div>
-    
+
   </div>
 </div>

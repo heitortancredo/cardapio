@@ -1,39 +1,138 @@
 <div class="row">
   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#tradicionaisI">Tradicionais I</a></li>
-    <li><a data-toggle="tab" href="#gourmets">Gourmets</a></li>
+    <li class="active"><a data-toggle="tab" href="#tradicionaisI">Tradi. I</a></li>
+    <li><a data-toggle="tab" href="#tradicionaisII">Tradi. II</a></li>
+    <li><a data-toggle="tab" href="#especiaisI">Especiais</a></li>
+    <li><a data-toggle="tab" href="#personalizados">Personalizados</a></li>
+    <li><a data-toggle="tab" href="#bombonsI">Bombons I</a></li>
+    <li><a data-toggle="tab" href="#bombonsII">Bombons II</a></li>
+    <li><a data-toggle="tab" href="#docesdeforno">Forno</a></li>
+    <li><a data-toggle="tab" href="#chocolatesmoldados">Moldados</a></li>
     <li><a data-toggle="tab" href="#caramelados">Caramelados</a></li>
-    <li><a data-toggle="tab" href="#bombons">Bombons</a></li>
+    <li><a data-toggle="tab" href="#minitacinhas">Tacinhas</a></li>
+    <li><a data-toggle="tab" href="#gourmets">Gourmets</a></li>
+    <li><a data-toggle="tab" href="#montagemdemesa">Montagem</a></li>
+
   </ul>
- 
+
   <div class="tab-content">
- 
     <div id="tradicionaisI" class="tab-pane fade in active">
       <div class="col-xs-6 col-xs-offset-3">
         <% @products.each do |product| %>
-        <%= render "product_row", product: product, order_item: @order_item %>
+          <%if product.category == "tradicionaisI" %>
+          <%= render "product_row", product: product, order_item: @order_item %>
+          <%end%>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="tradicionaisII" class="tab-pane fade in active">
+      <div class="col-xs-6 col-xs-offset-3">
+        <% @products.each do |product| %>
+          <%if product.category == "tradicionaisII" %>
+          <%= render "product_row", product: product, order_item: @order_item %>
+          <%end%>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="especiaisI" class="tab-pane fade in active">
+      <div class="col-xs-6 col-xs-offset-3">
+        <% @products.each do |product| %>
+          <%if product.category == "especiaisI" %>
+          <%= render "product_row", product: product, order_item: @order_item %>
+          <%end%>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="especiaisII" class="tab-pane fade in active">
+      <div class="col-xs-6 col-xs-offset-3">
+        <% @products.each do |product| %>
+          <%if product.category == "especiaisII" %>
+          <%= render "product_row", product: product, order_item: @order_item %>
+          <%end%>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="personalizados" class="tab-pane fade in active">
+      <div class="col-xs-6 col-xs-offset-3">
+        <% @products.each do |product| %>
+          <%if product.category == "personalizados" %>
+          <%= render "product_row", product: product, order_item: @order_item %>
+          <%end%>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="bombonsI" class="tab-pane fade in active">
+      <div class="col-xs-6 col-xs-offset-3">
+        <% @products.each do |product| %>
+          <%if product.category == "bombonsI" %>
+          <%= render "product_row", product: product, order_item: @order_item %>
+          <%end%>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="bombonsII" class="tab-pane fade in active">
+      <div class="col-xs-6 col-xs-offset-3">
+        <% @products.each do |product| %>
+          <%if product.category == "bombonsII" %>
+          <%= render "product_row", product: product, order_item: @order_item %>
+          <%end%>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="docesdeforno" class="tab-pane fade">
+      <div class="col-xs-6 col-xs-offset-3">
+        <% @products.each do |product| %>
+          <%if product.category == "docesdeforno" %>
+          <%= render "product_row", product: product, order_item: @order_item %>
+          <%end%>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="chocolatesmoldados" class="tab-pane fade">
+      <div class="col-xs-6 col-xs-offset-3">
+        <% @products.each do |product| %>
+          <%if product.category == "chocolatesmoldados" %>
+          <%= render "product_row", product: product, order_item: @order_item %>
+          <%end%>
+        <% end %>
+      </div>
+    </div>
+
+    <div id="minitacinhas" class="tab-pane fade">
+      <div class="col-xs-6 col-xs-offset-3">
+        <% @products.each do |product| %>
+          <%if product.category == "minitacinhas" %>
+          <%= render "product_row", product: product, order_item: @order_item %>
+          <%end%>
         <% end %>
       </div>
     </div>
 
     <div id="gourmets" class="tab-pane fade">
       <div class="col-xs-6 col-xs-offset-3">
-        <h3>Menu 1</h3>
-        <p>Teste Menu 1</p>
+        <% @products.each do |product| %>
+          <%if product.category == "gourmets" %>
+          <%= render "product_row", product: product, order_item: @order_item %>
+          <%end%>
+        <% end %>
       </div>
     </div>
 
     <div id="caramelados" class="tab-pane fade">
       <div class="col-xs-6 col-xs-offset-3">
-        <h3>Menu 2</h3>
-        <p>Teste Menu 1</p>
-      </div>
-    </div>
-
-    <div id="bombons" class="tab-pane fade">
-      <div class="col-xs-6 col-xs-offset-3">
-        <h3>Menu 3</h3>
-        <p>Teste Menu 1</p>
+        <% @products.each do |product| %>
+          <%if product.category == "caramelados" %>
+          <%= render "product_row", product: product, order_item: @order_item %>
+          <%end%>
+        <% end %>
       </div>
     </div>
 

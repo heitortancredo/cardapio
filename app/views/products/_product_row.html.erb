@@ -5,7 +5,7 @@
       <h10><%= product.name %></small></h10>
     </div>
     <div class="col-xs-4">
-      
+
       <%= form_for order_item, remote: true do |f| %>
       <h10 class="text-right">Preço Unidade: <span style="color: green"><%= number_to_currency product.price %></span></h10>
         <div class="input-group">
@@ -17,6 +17,6 @@
         </div>
       <% end %>
     </div>
-    
+
   </div>
 </div>
